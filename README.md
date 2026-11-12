@@ -1,3 +1,12 @@
+---
+title: PaperGrid PDF
+emoji: 📄
+colorFrom: indigo
+colorTo: blue
+sdk: docker
+app_port: 8000
+---
+
 # UltraPDF Studio Pro
 
 > **39+ 100% Free, Private, Offline PDF Tools in One Local Web Studio, Batch CLI, and Hotfolder Automation Suite.**  

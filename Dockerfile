@@ -20,7 +20,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-RUN mkdir -p temp_outputs
+RUN useradd -m -u 1000 user && mkdir -p /app/temp_outputs && chown -R user:user /app
+ENV HOME=/home/user
+
+USER user
 
 EXPOSE 8000
 
