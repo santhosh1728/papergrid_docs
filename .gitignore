@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+temp_outputs/
+hotfolder_input/
+hotfolder_output/
+.env
+*.log
+.DS_Store
+Thumbs.db

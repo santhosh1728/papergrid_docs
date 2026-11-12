@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: papergrid-pdf
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/system/config
+    envVars:
+      - key: PUBLIC_MODE
+        value: "true"
+      - key: MAX_UPLOAD_MB
+        value: "100"

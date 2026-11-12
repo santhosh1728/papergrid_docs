@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UltraPDF Studio Pro — Every Tool You Need to Work With PDFs in One Place</title>
+  <meta name="description" content="Every tool you need to use PDFs, at your fingertips. 100% FREE, offline & easy to use! Merge, split, compress, convert, rotate, unlock, watermark, OCR, sign, redact, and summarize PDFs.">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+
+  <div class="app-layout">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-container">
+        <div class="brand" id="brandHomeBtn" role="button" tabindex="0">
+          <div class="brand-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">UltraPDF Studio Pro</span>
+            <span class="brand-badge">39+ Offline PDF Tools</span>
+          </div>
+        </div>
+
+        <!-- Top Category Navigation -->
+        <nav class="top-nav" aria-label="Main Navigation">
+          <button type="button" class="nav-link active" data-category="all">All Tools</button>
+          <button type="button" class="nav-link" data-category="workflows">Workflows</button>
+          <button type="button" class="nav-link" data-category="organize">Organize PDF</button>
+          <button type="button" class="nav-link" data-category="optimize">Optimize PDF</button>
+          <button type="button" class="nav-link" data-category="convert">Convert PDF</button>
+          <button type="button" class="nav-link" data-category="edit">Edit PDF</button>
+          <button type="button" class="nav-link" data-category="security">PDF Security</button>
+          <button type="button" class="nav-link" data-category="intelligence">PDF Intelligence <span class="nav-new-pill">New!</span></button>
+        </nav>
+
+        <div class="header-actions">
+          <!-- Search tools -->
+          <div class="search-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="toolSearchInput" placeholder="Find a tool (e.g. compress, word, sign)..." spellcheck="false" autocomplete="off">
+            <span class="search-shortcut" id="searchShortcutKey">/</span>
+          </div>
+
+          <!-- Features & Architecture Guide Button -->
+          <button type="button" class="btn btn-ghost btn-sm" id="btnOpenFeaturesGuide" title="Explore Detailed Guide of All 39 Features & Architecture">
+            <span>📖 Features &amp; Docs</span>
+          </button>
+
+          <!-- Accent Theme Switcher -->
+          <button type="button" class="btn btn-ghost btn-sm" id="btnCycleTheme" title="Switch Accent Theme">
+            <span id="themeIconLabel">🎨</span>
+          </button>
+
+          <!-- Hotfolder Automation Button -->
+          <button type="button" class="btn btn-ghost btn-sm" id="btnOpenHotfolderModal" title="Manage Hotfolder Drop & Done Rules">
+            <span>📂 Hotfolder</span>
+          </button>
+
+          <!-- Recent History Drawer Button -->
+          <button type="button" class="btn btn-ghost btn-sm" id="btnToggleHistory" title="Recent Processed Files & Chaining">
+            <span>🕒 History</span>
+            <span class="cat-count" id="historyCountBadge">0</span>
+          </button>
+
+          <!-- Batch Studio Toggle -->
+          <button type="button" class="btn btn-secondary btn-sm" id="btnToggleBatchStudio" title="Toggle 500MB+ Batch Merge & Compress View">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Batch 500MB+ Studio</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+      <div class="content-container">
+        
+        <!-- ===================================================================
+             1. HERO & CATEGORIES HUB SECTION
+             =================================================================== -->
+        <section class="hero-section" id="heroSection">
+          <div class="hero-tag">100% Private Local Engine • PyMuPDF + RapidOCR + pyHanko + Story CSS</div>
+          <h1 class="hero-title">Every Tool You Need to Use PDFs, at Your Fingertips</h1>
+          <p class="hero-subtitle">
+            All <strong>39 offline PDF tools</strong> run entirely on your machine with zero cloud uploads or size caps. Edit visually on live pages, OCR scans, chat with documents, verify cryptographic signatures, or batch-compress 500MB+ folders.
+          </p>
+
+          <!-- Interactive Quick Telemetry Strip & CTA -->
+          <div class="hero-stats-strip">
+            <div class="hero-stat-pill"><span class="stat-dot dot-indigo"></span><strong>39</strong> Offline Tools</div>
+            <div class="hero-stat-pill"><span class="stat-dot dot-emerald"></span><strong>0 Bytes</strong> Sent to Cloud</div>
+            <div class="hero-stat-pill"><span class="stat-dot dot-cyan"></span><strong>ONNX</strong> Neural OCR</div>
+            <div class="hero-stat-pill"><span class="stat-dot dot-amber"></span><strong>AES-256 &amp; PKCS#7</strong> Security</div>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnHeroExploreFeatures">📖 Explore All Features &amp; Architecture &rarr;</button>
+          </div>
+
+          <!-- Interactive Feature Spotlight Deck -->
+          <div class="spotlight-deck" id="spotlightDeck">
+            <div class="spotlight-card" data-launch="edit_pdf">
+              <div class="spotlight-badge">Interactive Canvas</div>
+              <div class="spotlight-title">✏️ Visual PDF Studio</div>
+              <p class="spotlight-desc">Draw ink, arrows, highlights, whiteout, drag signatures, and design AcroForms directly on live pages.</p>
+            </div>
+            <div class="spotlight-card" data-launch="ocr_pdf">
+              <div class="spotlight-badge">Offline ONNX</div>
+              <div class="spotlight-title">🔍 RapidOCR Text Layer</div>
+              <p class="spotlight-desc">Turn scanned PDFs and receipts into selectable, searchable PDFs without Tesseract or cloud APIs.</p>
+            </div>
+            <div class="spotlight-card" data-launch="chat_pdf">
+              <div class="spotlight-badge">Local RAG</div>
+              <div class="spotlight-title">💬 Chat with PDF</div>
+              <p class="spotlight-desc">Ask questions across multiple PDFs via BM25 retrieval (or Ollama) with clickable page citations.</p>
+            </div>
+            <div class="spotlight-card" data-launch="compare_pdf">
+              <div class="spotlight-badge">Pixel + DiffLib</div>
+              <div class="spotlight-title">⚖️ Visual Diff Heatmap</div>
+              <p class="spotlight-desc">Spot every added word and pixel change side-by-side and export an Annotated Diff PDF.</p>
+            </div>
+            <div class="spotlight-card" data-launch="sign_pdf">
+              <div class="spotlight-badge">PKI Crypto</div>
+              <div class="spotlight-title">✍️ Visual + .pfx Signing</div>
+              <p class="spotlight-desc">Drag &amp; resize your drawn or typed signature, then seal documents with RSA-2048 PKCS#7 certificates.</p>
+            </div>
+            <div class="spotlight-card" data-launch="batch_studio">
+              <div class="spotlight-badge">500MB+ Engine</div>
+              <div class="spotlight-title">🗜️ Batch &amp; Hotfolders</div>
+              <p class="spotlight-desc">Process 30+ massive local PDFs, hit exact MB limits, or auto-process Desktop\AutoMerge drops.</p>
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="category-pills-bar" role="tablist">
+            <button type="button" class="cat-pill active" data-filter="all" role="tab" aria-selected="true">
+              <span>All</span>
+              <span class="cat-count" id="countAll">39</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="workflows" role="tab" aria-selected="false">
+              <span>Workflows</span>
+              <span class="cat-count" id="countWorkflows">1</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="organize" role="tab" aria-selected="false">
+              <span>Organize PDF</span>
+              <span class="cat-count" id="countOrganize">4</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="optimize" role="tab" aria-selected="false">
+              <span>Optimize PDF</span>
+              <span class="cat-count" id="countOptimize">3</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="convert" role="tab" aria-selected="false">
+              <span>Convert PDF</span>
+              <span class="cat-count" id="countConvert">11</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="edit" role="tab" aria-selected="false">
+              <span>Edit PDF</span>
+              <span class="cat-count" id="countEdit">8</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="security" role="tab" aria-selected="false">
+              <span>PDF Security</span>
+              <span class="cat-count" id="countSecurity">6</span>
+            </button>
+            <button type="button" class="cat-pill" data-filter="intelligence" role="tab" aria-selected="false">
+              <span>PDF Intelligence</span>
+              <span class="badge-new-glow">New!</span>
+              <span class="cat-count" id="countIntelligence">6</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             2. ALL 32 TOOLS GRID
+             =================================================================== -->
+        <section class="tools-grid-section" id="toolsGridSection">
+          <div class="tools-grid" id="toolsGrid">
+            <!-- Populated dynamically by JavaScript with all 32 tools -->
+          </div>
+        </section>
+
+
+        <!-- ===================================================================
+             3. DEDICATED TOOL WORKSPACE STUDIO (Modal / Active Tool View)
+             =================================================================== -->
+        <section class="card tool-workspace-card" id="toolWorkspaceCard" style="display: none;">
+          <!-- Workspace Header -->
+          <div class="workspace-header">
+            <button type="button" class="btn btn-ghost btn-sm" id="btnBackToTools">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              All PDF Tools
+            </button>
+            <div class="workspace-title-box">
+              <div class="workspace-icon" id="workspaceToolIcon"></div>
+              <div>
+                <div class="workspace-title-row">
+                  <h2 class="workspace-tool-title" id="workspaceToolTitle">Tool Name</h2>
+                  <span class="category-badge" id="workspaceCategoryBadge">Category</span>
+                  <span class="badge-new-glow" id="workspaceNewBadge" style="display: none;">New!</span>
+                </div>
+                <p class="workspace-tool-desc" id="workspaceToolDesc">Description</p>
+              </div>
+            </div>
+            <div class="workspace-meta-status">
+              <span class="status-dot"></span>
+              <span>100% Private Offline Processing</span>
+            </div>
+          </div>
+
+          <!-- Workspace Body -->
+          <div class="workspace-body">
+            
+            <!-- Universal File Selection Dropzone -->
+            <div class="workspace-dropzone-wrap" id="workspaceDropzoneWrap">
+              <div class="dropzone" id="workspaceDropzone">
+                <input type="file" id="workspaceFileInput" class="file-input-hidden">
+                <div class="dropzone-icon" id="workspaceDropzoneIcon">
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
+                    <path d="M12 12v9"></path>
+                    <path d="m16 16-4-4-4 4"></path>
+                  </svg>
+                </div>
+                <h3 class="dropzone-title" id="workspaceDropzoneTitle">Select PDF File</h3>
+                <p class="dropzone-subtitle" id="workspaceDropzoneSubtitle">
+                  Drag and drop your file here or <button type="button" class="link-btn" id="workspaceBrowseBtn">browse files</button>
+                </p>
+                <div style="margin-top: 10px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                  <button type="button" class="btn btn-secondary btn-sm" id="btnLoadSamplePdf" style="display: none;">✨ Try with Sample File</button>
+                </div>
+                <div class="dropzone-meta" id="workspaceDropzoneMeta">100% Offline • Secure Local Memory • Zero Size Limit</div>
+              </div>
+
+              <!-- In-Workspace Detailed Explanation Accordion -->
+              <div class="workspace-guide-box" id="workspaceGuideBox" style="display: none;">
+                <button type="button" class="workspace-guide-toggle" id="btnToggleWorkspaceGuide">
+                  <span>ℹ️ <strong>How this tool works &amp; Pro Tips</strong> <span class="engine-pill" id="workspaceEnginePill">Engine</span></span>
+                  <span id="workspaceGuideChevron">▼</span>
+                </button>
+                <div class="workspace-guide-body" id="workspaceGuideBody" style="display: none;">
+                  <p id="workspaceHowItWorksText"></p>
+                  <div class="guide-meta-row">
+                    <div><strong>Formats:</strong> <span id="workspaceFormatsText"></span></div>
+                    <div><strong>💡 Pro Tip:</strong> <span id="workspaceProTipText"></span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- URL / Webpage Input (Visible for HTML to PDF) -->
+              <div class="url-input-box" id="workspaceUrlInputBox" style="display: none;">
+                <label class="input-label" for="txtWebUrl">Enter Webpage URL or Paste Raw HTML Code:</label>
+                <div class="folder-input-group">
+                  <input type="text" id="txtWebUrl" class="text-input" placeholder="https://en.wikipedia.org/wiki/PDF or paste HTML...">
+                  <button type="button" class="btn btn-secondary btn-sm" id="btnLoadSampleHtml">✨ Load Sample HTML</button>
+                </div>
+              </div>
+
+              <!-- Camera Scanner Viewfinder (Visible for Scan to PDF) -->
+              <div class="camera-scanner-box" id="cameraScannerBox" style="display: none;">
+                <div class="camera-preview-container">
+                  <video id="cameraVideo" autoplay playsinline class="camera-video"></video>
+                  <canvas id="cameraCanvas" style="display: none;"></canvas>
+                  <div class="scanner-crosshairs"></div>
+                </div>
+                <div class="camera-controls">
+                  <button type="button" class="btn btn-secondary btn-sm" id="btnStartCamera">Start Webcam</button>
+                  <button type="button" class="btn btn-primary" id="btnSnapPhoto">📸 Capture Page</button>
+                  <button type="button" class="btn btn-ghost btn-sm" id="btnStopCamera">Stop Camera</button>
+                </div>
+                <div class="camera-snaps-reel" id="cameraSnapsReel"></div>
+              </div>
+
+              <!-- Selected Files Chip List -->
+              <div class="selected-files-list" id="workspaceSelectedFilesList" style="display: none;"></div>
+            </div>
+
+            <!-- Tool-Specific Interactive Controls (Dynamic Options) -->
+            <div class="tool-options-panel" id="toolOptionsPanel">
+              <h3 class="options-panel-title">Tool Configuration</h3>
+              <div id="dynamicToolControls"></div>
+            </div>
+
+            <!-- Action & Progress Bar -->
+            <div class="workspace-action-bar">
+              <button type="button" class="btn btn-primary btn-lg" id="btnExecuteTool">
+                <span class="btn-text" id="btnExecuteToolText">Execute Tool</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Execution Progress State -->
+            <div class="tool-progress-wrap" id="toolProgressWrap" style="display: none;">
+              <div class="progress-info-row">
+                <span class="progress-status-msg" id="toolProgressMsg">Processing document...</span>
+                <span class="progress-percent" id="toolProgressPct">0%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" id="toolProgressBarFill" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Result Card -->
+            <div class="tool-result-card" id="toolResultCard" style="display: none;">
+              <div class="result-header">
+                <div class="result-check-icon">✓</div>
+                <div>
+                  <h3 class="result-title" id="toolResultTitle">Document Ready!</h3>
+                  <p class="result-subtitle" id="toolResultSubtitle">Processed successfully.</p>
+                </div>
+              </div>
+
+              <!-- Result Actions & Download -->
+              <div class="result-actions-row">
+                <a href="#" class="btn btn-primary btn-lg" id="toolDownloadBtn" download>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span id="toolDownloadBtnText">Download File</span>
+                </a>
+
+                <button type="button" class="btn btn-secondary btn-sm" id="btnOpenInFolderTool">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  Show in Folder
+                </button>
+
+                <button type="button" class="btn btn-ghost btn-sm" id="btnPreviewResult">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Preview Document
+                </button>
+              </div>
+
+              <!-- 1-Click Chain Output to Another Tool -->
+              <div class="chain-tool-bar" id="chainToolBar" style="display: none;">
+                <span class="chain-label">⚡ Continue editing this output in:</span>
+                <select id="selChainTargetTool" class="select-input select-sm"></select>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnChainOutput">Send Output to Tool &rarr;</button>
+              </div>
+
+              <!-- Specialized Result Views (e.g. AI Summary, Markdown Text, Compare Diff) -->
+              <div class="specialized-result-box" id="specializedResultBox" style="display: none;"></div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ===================================================================
+             4. ORIGINAL 500MB+ BATCH MERGE & COMPRESS STUDIO (Preserved in full!)
+             =================================================================== -->
+        <div class="card main-card" id="batchMergeStudioCard" style="display: none;">
+          <div class="batch-studio-header">
+            <div>
+              <h2 class="section-title">Batch 500MB+ Merge &amp; Super-Compress Studio</h2>
+              <p class="section-desc">Enterprise offline engine for processing 30+ massive documents directly from your hard drive.</p>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm" id="btnCloseBatchStudio">← Back to Hub</button>
+          </div>
+
+          <!-- Mode Navigation Tabs -->
+          <div class="mode-tabs-container">
+            <div class="mode-tabs" role="tablist">
+              <button class="mode-tab active" id="tabLocalFolder" role="tab" aria-selected="true" data-tab="localFolder">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Local Folder (Instant / 500MB+)</span>
+                <span class="badge-recommended">Fastest</span>
+              </button>
+              <button class="mode-tab" id="tabFileUpload" role="tab" aria-selected="false" data-tab="fileUpload">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Universal Upload (PDF, JPG, PNG)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mode A: Local Folder Panel -->
+          <div class="tab-panel active" id="panelLocalFolder">
+            <div class="folder-select-box">
+              <div class="folder-box-info">
+                <div class="box-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="box-title">Select Local Folder</h3>
+                  <p class="box-desc">Reads all 30 PDFs, photos, and scans directly from your hard drive with zero upload lag and instant thumbnail generation.</p>
+                </div>
+              </div>
+
+              <div class="folder-input-group">
+                <input 
+                  type="text" 
+                  id="folderPathInput" 
+                  class="text-input" 
+                  placeholder="e.g. C:\Users\SANTHOSH\Desktop\MyPDFs or click Browse..." 
+                  spellcheck="false"
+                >
+                <button type="button" class="btn btn-secondary" id="btnBrowseFolder">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  Browse Folder
+                </button>
+                <button type="button" class="btn btn-primary" id="btnScanFolder">
+                  Scan Files
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mode B: Drag & Drop Universal Upload Panel -->
+          <div class="tab-panel" id="panelFileUpload">
+            <div class="dropzone" id="fileDropzone">
+              <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.bmp,.txt,.log,.csv,.docx,.xlsx,.pptx" class="file-input-hidden">
+              <div class="dropzone-icon">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
+                  <path d="M12 12v9"></path>
+                  <path d="m16 16-4-4-4 4"></path>
+                </svg>
+              </div>
+              <h3 class="dropzone-title">Drag &amp; Drop Documents &amp; Images Here</h3>
+              <p class="dropzone-subtitle">Accepts <strong>PDF, DOCX, XLSX, PPTX, JPG, PNG, TXT</strong> • <button type="button" class="link-btn" id="btnTriggerBrowse">browse files</button></p>
+              <div class="dropzone-meta">Universal Converter Active • 30+ Files • 500MB+ Supported</div>
+            </div>
+          </div>
+
+          <!-- Interactive File Gallery / Preview Section -->
+          <div class="files-preview-section" id="filesPreviewSection" style="display: none;">
+            <div class="section-header">
+              <div class="section-title-wrap">
+                <h3 class="section-title">Documents &amp; Images to Merge (<span id="totalFilesCount">0</span>)</h3>
+                <span class="total-size-badge" id="totalSizeBadge">0 MB</span>
+                <span class="total-pages-badge" id="totalPagesBadge">0 pages</span>
+              </div>
+              <div class="section-actions">
+                <div class="view-toggle-btns" role="group">
+                  <button type="button" class="btn-toggle active" id="btnViewGrid" title="Visual Thumbnail Grid View">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="7" height="7"></rect>
+                      <rect x="14" y="3" width="7" height="7"></rect>
+                      <rect x="14" y="14" width="7" height="7"></rect>
+                      <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Thumbnails
+                  </button>
+                  <button type="button" class="btn-toggle" id="btnViewList" title="Compact List View">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="8" y1="6" x2="21" y2="6"></line>
+                      <line x1="8" y1="12" x2="21" y2="12"></line>
+                      <line x1="8" y1="18" x2="21" y2="18"></line>
+                      <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                      <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                      <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                    </svg>
+                    List
+                  </button>
+                </div>
+
+                <button type="button" class="btn btn-ghost btn-sm" id="btnSortNatural" title="Sort Naturally (1, 2, ..., 10, 20)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="11" y1="5" x2="19" y2="5"></line>
+                    <line x1="11" y1="9" x2="19" y2="9"></line>
+                    <line x1="11" y1="13" x2="19" y2="13"></line>
+                    <line x1="11" y1="17" x2="19" y2="17"></line>
+                    <polyline points="4 6 7 3 10 6"></polyline>
+                    <polyline points="4 18 7 21 10 18"></polyline>
+                  </svg>
+                  Natural Sort
+                </button>
+                <button type="button" class="btn btn-ghost btn-sm btn-danger-hover" id="btnClearFiles">
+                  Clear All
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic File Container (Grid / List) -->
+            <div class="file-gallery-grid" id="fileGalleryContainer"></div>
+          </div>
+
+          <!-- Compression & Advanced Optimization Section -->
+          <div class="options-section" id="optionsSection" style="display: none;">
+            
+            <div class="compression-header-wrap">
+              <div>
+                <h3 class="section-title">Compression Level</h3>
+                <p class="section-desc">Choose a pre-tuned preset or specify an exact custom target size:</p>
+              </div>
+            </div>
+
+            <!-- Presets Grid -->
+            <div class="presets-grid">
+              
+              <!-- Preset 1: Balanced (Default) -->
+              <label class="preset-card selected" id="presetBalancedCard">
+                <input type="radio" name="compressionPreset" value="balanced" checked>
+                <div class="preset-badge">Recommended</div>
+                <div class="preset-header">
+                  <div class="preset-icon balanced-icon">🌟</div>
+                  <div>
+                    <h4 class="preset-name">Balanced</h4>
+                    <span class="preset-reduction">~75% to 92% Reduction</span>
+                  </div>
+                </div>
+                <p class="preset-details">
+                  Resamples images to 150 DPI with 75% quality. Crisp text, flawless charts, perfect for reading &amp; printing.
+                </p>
+                <div class="preset-tags">
+                  <span>150 DPI</span>
+                  <span>75% Quality</span>
+                  <span>Deflate Streams</span>
+                </div>
+              </label>
+
+              <!-- Preset 2: Custom Target Size -->
+              <label class="preset-card" id="presetCustomCard">
+                <input type="radio" name="compressionPreset" value="custom">
+                <div class="preset-badge custom-badge">Target Size</div>
+                <div class="preset-header">
+                  <div class="preset-icon custom-icon">🎯</div>
+                  <div>
+                    <h4 class="preset-name">Custom Target Size</h4>
+                    <span class="preset-reduction" id="customTargetSummary">Compress to specific MB</span>
+                  </div>
+                </div>
+                <p class="preset-details">
+                  Enter an exact target file size ceiling (e.g., 20 MB). Engine tunes resolution &amp; quality to fit.
+                </p>
+                <div class="preset-tags">
+                  <span>Exact MB Target</span>
+                  <span>Auto Tuning</span>
+                  <span>Smart Scaling</span>
+                </div>
+              </label>
+
+              <!-- Preset 3: Ultra B&W (98% reduction) -->
+              <label class="preset-card" id="presetUltraBwCard">
+                <input type="radio" name="compressionPreset" value="ultrabw">
+                <div class="preset-badge ultra-badge">Extreme 98%</div>
+                <div class="preset-header">
+                  <div class="preset-icon ultrabw-icon">⚡</div>
+                  <div>
+                    <h4 class="preset-name">Ultra-B&amp;W 1-Bit</h4>
+                    <span class="preset-reduction">Up to 98% Reduction</span>
+                  </div>
+                </div>
+                <p class="preset-details">
+                  Monochrome thresholding turns 500 MB of scanned contracts and receipts into razor-sharp, tiny ~10 MB files.
+                </p>
+                <div class="preset-tags">
+                  <span>1-Bit Monochrome</span>
+                  <span>Tiny Scans</span>
+                  <span>Maximum Savings</span>
+                </div>
+              </label>
+
+              <!-- Preset 4: Maximum Quality -->
+              <label class="preset-card" id="presetMaximumCard">
+                <input type="radio" name="compressionPreset" value="maximum">
+                <div class="preset-badge low-badge">High Res</div>
+                <div class="preset-header">
+                  <div class="preset-icon max-icon">💎</div>
+                  <div>
+                    <h4 class="preset-name">Maximum Quality</h4>
+                    <span class="preset-reduction">~40% to 65% Reduction</span>
+                  </div>
+                </div>
+                <p class="preset-details">
+                  Preserves 200 DPI with 85% JPEG quality. Suitable for archival photo albums and detailed art blueprints.
+                </p>
+                <div class="preset-tags">
+                  <span>200 DPI</span>
+                  <span>85% Quality</span>
+                  <span>Lossless Deflate</span>
+                </div>
+              </label>
+
+            </div>
+
+            <!-- Custom Size Input Box -->
+            <div class="custom-size-box" id="customSizeBox" style="display: none;">
+              <div class="custom-size-header">
+                <div>
+                  <h4 class="custom-size-title">Specify Target File Size</h4>
+                  <p class="custom-size-desc">Engine dynamically solves resolution and compression parameters to match your target:</p>
+                </div>
+                <div class="target-mb-input-wrap">
+                  <input type="number" id="customTargetMbInput" class="number-input" min="1" max="500" value="25" step="1">
+                  <span class="target-unit">MB</span>
+                </div>
+              </div>
+              <input type="range" id="customTargetSlider" class="range-slider" min="1" max="150" value="25" step="1">
+              <div class="quick-target-chips">
+                <span class="chip-label">Quick Presets:</span>
+                <button type="button" class="btn-chip" data-size="10">10 MB</button>
+                <button type="button" class="btn-chip" data-size="20">20 MB</button>
+                <button type="button" class="btn-chip active" data-size="25">25 MB (Email Limit)</button>
+                <button type="button" class="btn-chip" data-size="50">50 MB</button>
+                <button type="button" class="btn-chip" data-size="100">100 MB</button>
+              </div>
+            </div>
+
+            <!-- Advanced AI & PDF Surgery Features -->
+            <div class="advanced-accordion">
+              <button type="button" class="accordion-toggle" id="btnToggleAdvanced" aria-expanded="false">
+                <div class="accordion-toggle-left">
+                  <span class="sparkle-icon">✨</span>
+                  <span class="accordion-title">AI &amp; Document Intelligence Features (PII Redaction, Executive Summary, Bates Numbers)</span>
+                </div>
+                <svg class="chevron-icon" id="advancedChevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+
+              <div class="accordion-content" id="advancedContent" style="display: none;">
+                <div class="features-checklist-grid">
+                  
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkRedactPii">
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">🛡️ AI PII Privacy Redaction</strong>
+                      <p class="feature-sub">Automatically scan text and place black redaction bars over Credit Cards, Emails, and Phone Numbers.</p>
+                    </div>
+                  </label>
+
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkExecutiveSummary">
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">📑 Executive Summary Cover Sheet</strong>
+                      <p class="feature-sub">Prepend a sleek Page 1 Table of Contents with document categories, dates, and page counts.</p>
+                    </div>
+                  </label>
+
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkAddBookmarks" checked>
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">🔖 PDF Bookmarks (TOC Outline)</strong>
+                      <p class="feature-sub">Generate a clickable sidebar bookmark outline for every document in the final PDF.</p>
+                    </div>
+                  </label>
+
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkGrayscale">
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">🖤 Grayscale Conversion</strong>
+                      <p class="feature-sub">Convert all color pages and photos to clean 8-bit grayscale for additional size reduction.</p>
+                    </div>
+                  </label>
+
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkRemoveBlankPages">
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">✂️ Filter Blank Pages</strong>
+                      <p class="feature-sub">Automatically detect and strip completely blank pages created by duplex scanners.</p>
+                    </div>
+                  </label>
+
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkAddPageNumbers">
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">🔢 Bates / Sequential Page Numbering</strong>
+                      <p class="feature-sub">Stamp neat footer page numbers (e.g. Page 1 of 45) at the bottom center of every page.</p>
+                    </div>
+                  </label>
+
+                  <label class="feature-checkbox-card">
+                    <input type="checkbox" id="chkStripMetadata" checked>
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">🧹 Strip Metadata &amp; Unused Streams</strong>
+                      <p class="feature-sub">Remove author names, editing software tags, and unreferenced stream objects.</p>
+                    </div>
+                  </label>
+
+                </div>
+
+                <!-- Custom Watermark & Password Inputs -->
+                <div class="advanced-inputs-row">
+                  <div class="input-col">
+                    <label class="input-label" for="txtWatermark">Watermark Stamp (Optional)</label>
+                    <input type="text" id="txtWatermark" class="text-input" placeholder="e.g. CONFIDENTIAL or APPROVED">
+                  </div>
+                  <div class="input-col">
+                    <label class="input-label" for="txtPassword">Password Protection (Optional)</label>
+                    <input type="password" id="txtPassword" class="text-input" placeholder="Encrypt output with password">
+                  </div>
+                </div>
+
+                <!-- Post-Merge Auto-Split Toggle -->
+                <div class="auto-split-banner">
+                  <label class="feature-checkbox-card inline-card">
+                    <input type="checkbox" id="chkAutoSplit">
+                    <div class="checkbox-custom"></div>
+                    <div>
+                      <strong class="feature-name">📦 Auto-Split Output if Compressed PDF exceeds threshold</strong>
+                      <p class="feature-sub">Automatically split into parts if final compressed size is over threshold.</p>
+                    </div>
+                  </label>
+                  <div class="auto-split-options" id="autoSplitOptions" style="display: none;">
+                    <div class="split-input-field">
+                      <span>Threshold:</span>
+                      <input type="number" id="txtAutoSplitThreshold" class="number-input number-sm" value="100" min="5" max="1000">
+                      <span>MB</span>
+                    </div>
+                    <div class="split-input-field">
+                      <span>Parts:</span>
+                      <select id="selAutoSplitParts" class="select-input select-sm">
+                        <option value="2">2 Parts (Half &amp; Half)</option>
+                        <option value="3">3 Equal Parts</option>
+                        <option value="4">4 Equal Parts</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Output Filename & Primary Action Bar -->
+            <div class="action-bar-container">
+              <div class="filename-input-wrap">
+                <label class="input-label" for="outputFilenameInput">Output File Name</label>
+                <input 
+                  type="text" 
+                  id="outputFilenameInput" 
+                  class="text-input text-bold" 
+                  value="Merged_Compressed_Balanced.pdf" 
+                  spellcheck="false"
+                >
+              </div>
+
+              <button type="button" class="btn btn-primary btn-lg" id="btnStartProcessing">
+                <span class="btn-text" id="btnActionText">Merge &amp; Compress 30+ Files</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Progress & SSE Live Stream Section -->
+          <div class="progress-section" id="progressSection" style="display: none;">
+            <div class="progress-card">
+              <div class="progress-header">
+                <div>
+                  <h3 class="progress-title" id="progressTitle">Processing Documents...</h3>
+                  <p class="progress-msg" id="progressMessage">Initializing UltraPDF engine...</p>
+                </div>
+                <div class="progress-percent-badge" id="progressPercent">0%</div>
+              </div>
+
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;"></div>
+              </div>
+
+              <div class="stage-stepper">
+                <div class="step-tag active" id="stepTag1">1. Ingesting &amp; AI Analysis</div>
+                <div class="step-tag" id="stepTag2">2. Image Resampling</div>
+                <div class="step-tag" id="stepTag3">3. Deflating &amp; PII Redact</div>
+                <div class="step-tag" id="stepTag4">4. Final Verification</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results & Split Divider Section -->
+          <div class="result-section" id="resultSection" style="display: none;">
+            
+            <div class="result-banner">
+              <div class="result-badge-icon">✓</div>
+              <div class="result-banner-text">
+                <h3 class="result-banner-title">Optimization &amp; Merge Completed!</h3>
+                <p class="result-banner-subtitle" id="resultFilenameSubtitle">Merged_Compressed_Balanced.pdf</p>
+              </div>
+              <div class="reduction-badge" id="metricReductionPct">0% Saved</div>
+            </div>
+
+            <!-- Stats & Metrics Cards Grid -->
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <span class="metric-label">Original Combined Size</span>
+                <span class="metric-value" id="metricOriginalSize">0 MB</span>
+                <span class="metric-sub" id="metricInputFilesCount">0 files</span>
+              </div>
+              <div class="metric-card highlight-metric">
+                <span class="metric-label">Optimized Output Size</span>
+                <span class="metric-value value-green" id="metricFinalSize">0 MB</span>
+                <span class="metric-sub" id="metricTotalPages">0 pages</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Space Recovered</span>
+                <span class="metric-value" id="metricSavedBytes">0 MB</span>
+                <span class="metric-sub" id="metricImagesCompressed">0 images compressed</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Processing Time</span>
+                <span class="metric-value" id="metricElapsedSec">0s</span>
+                <span class="metric-sub">Local 100% Offline</span>
+              </div>
+            </div>
+
+            <!-- Storage Bloat Inspector Breakdown -->
+            <div class="bloat-card" id="bloatCard" style="display: none;">
+              <h4 class="bloat-title">📊 Storage Bloat Inspector (Space Allocation)</h4>
+              <div class="bloat-bar-track">
+                <div class="bloat-segment segment-images" id="bloatBarImages" style="width: 70%;" title="Images"></div>
+                <div class="bloat-segment segment-fonts" id="bloatBarFonts" style="width: 15%;" title="Fonts"></div>
+                <div class="bloat-segment segment-structure" id="bloatBarStructure" style="width: 15%;" title="Structure"></div>
+              </div>
+              <div class="bloat-legend">
+                <div class="legend-item"><span class="legend-dot dot-images"></span><span>Images: <strong id="bloatPctImages">0%</strong></span></div>
+                <div class="legend-item"><span class="legend-dot dot-fonts"></span><span>Fonts: <strong id="bloatPctFonts">0%</strong></span></div>
+                <div class="legend-item"><span class="legend-dot dot-structure"></span><span>Syntax/Streams: <strong id="bloatPctStructure">0%</strong></span></div>
+              </div>
+            </div>
+
+            <!-- Download & Exploration Action Row -->
+            <div class="result-actions-container">
+              <a href="#" class="btn btn-primary btn-lg" id="btnDownloadMerged" download>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Merged PDF</span>
+              </a>
+
+              <button type="button" class="btn btn-secondary" id="btnOpenInFolder">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Show in Windows Folder</span>
+              </button>
+
+              <button type="button" class="btn btn-ghost" id="btnQualityDiffPreview">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>Quality Inspection (Page 1)</span>
+              </button>
+            </div>
+
+            <!-- Document Divider / Visual Splitter Workspace -->
+            <div class="divider-workspace-card">
+              <div class="divider-header">
+                <div>
+                  <h4 class="divider-title">✂️ Post-Merge Document Divider (Visual Splitter)</h4>
+                  <p class="divider-desc">Divide this merged document into balanced parts or strict WhatsApp/Email MB chunks:</p>
+                </div>
+              </div>
+
+              <div class="divider-controls-row">
+                <div class="split-chips-group">
+                  <button type="button" class="split-chip active" data-mode="parts" data-parts="2">
+                    <span class="chip-main">Half &amp; Half</span>
+                    <span class="chip-detail">(2 Standalone Files)</span>
+                  </button>
+                  <button type="button" class="split-chip" data-mode="parts" data-parts="3">
+                    <span class="chip-main">3 Equal Parts</span>
+                    <span class="chip-detail">(Even Page Balance)</span>
+                  </button>
+                  <button type="button" class="split-chip" data-mode="parts" data-parts="4">
+                    <span class="chip-main">4 Equal Parts</span>
+                    <span class="chip-detail">(Even Page Balance)</span>
+                  </button>
+                  <button type="button" class="split-chip" data-mode="max_size" data-max="25">
+                    <span class="chip-main">Under 25 MB / Part</span>
+                    <span class="chip-detail">(Email &amp; WhatsApp Safe)</span>
+                  </button>
+                </div>
+
+                <button type="button" class="btn btn-secondary" id="btnTriggerSplit">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                    <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                    <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                  </svg>
+                  Divide Document Now
+                </button>
+              </div>
+
+              <!-- Split Results List (Dynamic) -->
+              <div class="split-results-wrap" id="splitResultsWrap" style="display: none;">
+                <div class="split-results-header">
+                  <span class="split-success-text">Document Divided Successfully:</span>
+                  <a href="#" class="btn btn-primary btn-sm" id="btnDownloadAllZip">
+                    📦 Download All Parts (.ZIP)
+                  </a>
+                </div>
+                <div class="split-parts-list" id="splitPartsList"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             5. DETAILED INTERACTIVE FEATURES & ARCHITECTURE GUIDE VIEW
+             =================================================================== -->
+        <section class="card features-guide-section" id="featuresGuideSection" style="display: none;">
+          <div class="batch-studio-header">
+            <div>
+              <span class="hero-tag" style="margin-bottom:8px;">Complete Project Documentation</span>
+              <h2 class="section-title" style="font-size:26px;">UltraPDF Studio Pro — Complete Feature Guide &amp; Architecture</h2>
+              <p class="section-desc">Explore how all 39 offline PDF tools, Batch 500MB+ compression, Desktop Hotfolder rules, and CLI automation work under the hood.</p>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm" id="btnCloseFeaturesGuide">&larr; Back to Tools Hub</button>
+          </div>
+
+          <!-- Visual Interactive Architecture Pipeline -->
+          <div class="arch-pipeline-card">
+            <h3 class="options-panel-title">⚙️ Local Offline Processing Architecture (Zero Cloud Egress)</h3>
+            <div class="arch-pipeline-grid">
+              <div class="arch-stage">
+                <div class="arch-step-num">1</div>
+                <h4>Universal Ingestion</h4>
+                <p>Accepts <strong>PDF, JPG, PNG, WEBP, DOCX, XLSX, PPTX, TXT, CSV, HTML &amp; Webcam</strong> streams locally via FastAPI, CLI, or Hotfolder drops.</p>
+              </div>
+              <div class="arch-arrow">&rarr;</div>
+              <div class="arch-stage">
+                <div class="arch-step-num">2</div>
+                <h4>Core Offline Engines</h4>
+                <p><strong>PyMuPDF</strong> (vectors/XMP/Story CSS), <strong>RapidOCR ONNX</strong> (searchable text layer), <strong>pdf2docx</strong>, <strong>Pillow</strong> &amp; <strong>Headless Edge</strong>.</p>
+              </div>
+              <div class="arch-arrow">&rarr;</div>
+              <div class="arch-stage">
+                <div class="arch-step-num">3</div>
+                <h4>Security &amp; Intelligence</h4>
+                <p><strong>pyHanko</strong> RSA-2048 PKCS#7 signing, <strong>AES-256</strong> permissions, 8-pattern PII + box redaction, <strong>BM25 RAG</strong> Q&amp;A, and pixel heatmaps.</p>
+              </div>
+              <div class="arch-arrow">&rarr;</div>
+              <div class="arch-stage">
+                <div class="arch-step-num">4</div>
+                <h4>Chaining &amp; Automation</h4>
+                <p>1-click <strong>Send Output to Next Tool</strong>, 14-step saved Workflows, live SSE streams, and <strong>Desktop\AutoMerge</strong> system-tray rules.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Execution Modes Overview (Web Studio, Batch 500MB+, Hotfolder, CLI) -->
+          <div class="modes-overview-grid">
+            <div class="mode-doc-card">
+              <h4>🚀 Batch 500MB+ Engine</h4>
+              <p>Reads 30+ massive documents directly from local folders without HTTP upload lag, builds Executive Summary covers, runs Storage Bloat analysis, and solves exact target MB ceilings via adaptive multi-pass compression.</p>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnGuideOpenBatch">Open Batch 500MB+ Studio &rarr;</button>
+            </div>
+            <div class="mode-doc-card">
+              <h4>📂 Rule-Based Desktop Hotfolders</h4>
+              <p>Drop files into <code>Desktop\AutoMerge\Input\</code> or profile folders (<code>UltraBW_Max</code>, <code>OCR_Searchable</code>, <code>Redact_PII</code>, <code>PDF_to_Word</code>) and collect outputs automatically. Supports Windows System Tray mode.</p>
+              <div class="code-copy-row">
+                <code>.\.venv\Scripts\python.exe watcher.py --tray</code>
+                <button type="button" class="btn-icon-xs btn-copy-cmd" data-cmd=".\.venv\Scripts\python.exe watcher.py --tray">Copy</button>
+              </div>
+            </div>
+            <div class="mode-doc-card">
+              <h4>⌨️ High-Scale CLI Automation</h4>
+              <p>Script full merge, compression, PII redaction, executive summary, Bates numbering, watermark, AES-256 encryption, and auto-splitting right from PowerShell.</p>
+              <div class="code-copy-row">
+                <code>.\.venv\Scripts\python.exe merge_and_compress.py "MyPDFs" -o Out.pdf --level balanced --redact-pii --summary</code>
+                <button type="button" class="btn-icon-xs btn-copy-cmd" data-cmd='.\.venv\Scripts\python.exe merge_and_compress.py "MyPDFs" -o Out.pdf --level balanced --redact-pii --summary'>Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Searchable 39-Tool Deep-Dive Encyclopedia -->
+          <div class="encyclopedia-header">
+            <div>
+              <h3 class="section-title">📚 Detailed Reference of All 39 Tools</h3>
+              <p class="section-desc">Filter by category or search any feature to read exact engine details, formats, and launch directly.</p>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+              <input type="text" id="guideSearchInput" class="text-input" placeholder="Search features, engines, or formats..." style="width:260px;">
+              <select id="guideCategoryFilter" class="select-input" style="width:180px;">
+                <option value="all">All 7 Categories (39)</option>
+                <option value="organize">Organize PDF (4)</option>
+                <option value="optimize">Optimize PDF (3)</option>
+                <option value="convert">Convert PDF (11)</option>
+                <option value="edit">Edit PDF (8)</option>
+                <option value="security">PDF Security (6)</option>
+                <option value="intelligence">PDF Intelligence (6)</option>
+                <option value="workflows">Workflows (1)</option>
+              </select>
+            </div>
+          </div>
+          <div class="encyclopedia-grid" id="encyclopediaGrid"></div>
+        </section>
+
+        <!-- Hotfolder Desktop Banner -->
+        <div class="hotfolder-banner-card" id="hotfolderBannerCard">
+          <div class="hotfolder-icon">📂</div>
+          <div class="hotfolder-info">
+            <h4 class="hotfolder-title">Hotfolder Drop &amp; Done Profiles Ready</h4>
+            <p class="hotfolder-desc">Drop files into <code>Desktop\AutoMerge\Input</code> (or profile folders like <code>OCR_Searchable</code>, <code>UltraBW_Max</code>, <code>Redact_PII</code>, <code>PDF_to_Word</code>).</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnBannerHotfolder">Manage Rules</button>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Modal for Full Page Preview & Interactive Before/After Quality Slider -->
+    <div class="modal-overlay" id="previewModal" style="display: none;">
+      <div class="modal-dialog modal-dialog-lg">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalDocTitle">Document Preview</h3>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button type="button" class="btn btn-ghost btn-sm" id="btnModalZoomOut" title="Zoom Out">−</button>
+            <span id="modalZoomLabel" style="font-size:12px; color:var(--text-secondary);">100%</span>
+            <button type="button" class="btn btn-ghost btn-sm" id="btnModalZoomIn" title="Zoom In">+</button>
+            <button type="button" class="modal-close-btn" id="btnModalClose">&times;</button>
+          </div>
+        </div>
+        <div class="modal-body" id="modalPreviewBody">
+          <img id="modalPreviewImg" src="" alt="Page Preview" class="modal-img">
+          <div id="modalCompareSliderWrap" class="compare-slider-wrap" style="display: none;">
+            <img id="modalOrigImg" src="" alt="Original" class="compare-base-img">
+            <div class="compare-after-clip" id="modalAfterClip">
+              <img id="modalCompImg" src="" alt="Compressed" class="compare-after-img">
+            </div>
+            <div class="compare-slider-divider" id="modalSliderDivider"></div>
+            <input type="range" id="modalDiffRange" class="compare-range-input" min="0" max="100" value="50">
+            <span class="compare-badge-left">Original</span>
+            <span class="compare-badge-right">Compressed</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button type="button" class="btn btn-ghost btn-sm" id="btnModalPrevPage" style="display:none;">&larr; Prev</button>
+            <span id="modalPageInfo">Page 1 of 1</span>
+            <button type="button" class="btn btn-ghost btn-sm" id="btnModalNextPage" style="display:none;">Next &rarr;</button>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnModalDone">Close Preview</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Tool Details Modal -->
+    <div class="modal-overlay" id="toolDetailsModal" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 class="modal-title" id="detailsModalTitle">Tool Details</h3>
+          <button type="button" class="modal-close-btn" id="btnCloseDetailsModal">&times;</button>
+        </div>
+        <div class="modal-body" id="detailsModalBody" style="text-align:left;align-items:stretch;"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost btn-sm" id="btnDoneDetailsModal">Close</button>
+          <button type="button" class="btn btn-primary btn-sm" id="btnLaunchFromDetails">🚀 Open This Tool &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotfolder Automation Center Modal -->
+    <div class="modal-overlay" id="hotfolderModal" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 class="modal-title">📂 Hotfolder Automation Center</h3>
+          <button type="button" class="modal-close-btn" id="btnCloseHotfolderModal">&times;</button>
+        </div>
+        <div class="modal-body" id="hotfolderModalBody" style="text-align:left; align-items:stretch;">
+          <p style="font-size:13px; color:var(--text-secondary);">Loading hotfolder status...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" id="btnHotfolderOpenIn">Open Input Folder</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnHotfolderOpenOut">Open Output Folder</button>
+          <button type="button" class="btn btn-primary btn-sm" id="btnHotfolderScanNow">⚡ Scan &amp; Process Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent History Side Drawer -->
+    <aside class="side-drawer" id="historyDrawer" style="display: none;">
+      <div class="side-drawer-header">
+        <h3>🕒 Recent Outputs</h3>
+        <button type="button" class="modal-close-btn" id="btnCloseHistory">&times;</button>
+      </div>
+      <div class="side-drawer-body" id="historyDrawerBody">
+        <p style="font-size:13px; color:var(--text-muted);">No outputs generated in this session yet.</p>
+      </div>
+      <div class="side-drawer-footer">
+        <button type="button" class="btn btn-ghost btn-sm btn-danger-hover" id="btnClearTempCache">🧹 Clear Temp Cache</button>
+      </div>
+    </aside>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-container">
+        <span>UltraPDF Studio Pro • 39+ Offline PDF Tools • PyMuPDF, RapidOCR &amp; pyHanko Engine</span>
+        <span>Runs 100% locally on <code>localhost:8000</code></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/static/js/tools_catalog.js"></script>
+  <script src="/static/js/canvas_studio.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
